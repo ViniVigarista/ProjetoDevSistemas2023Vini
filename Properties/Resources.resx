@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="as" xml:space="preserve">
+    <value />
+  </data>
+  <data name="botaoCadastroProduto.Text" xml:space="preserve">
+    <value>Cadastro Produto</value>
+  </data>
+  <data name="botaoCadastroValor.Text" xml:space="preserve">
+    <value>Cadastro Valor</value>
+  </data>
+  <data name="botaoClientes.Text" xml:space="preserve">
+    <value>Clientes</value>
+  </data>
+  <data name="botaoFuncionarios.Text" xml:space="preserve">
+    <value>Funcionário</value>
+  </data>
+  <data name="botaoIngredientes.Text" xml:space="preserve">
+    <value>Ingredientes</value>
+  </data>
+  <data name="botaoPrincipal.Text" xml:space="preserve">
+    <value>Principal</value>
+  </data>
+  <data name="botaoSabores.Text" xml:space="preserve">
+    <value>Sabores</value>
+  </data>
+  <data name="buttonCancelar.Text" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="buttonLimpar.Text" xml:space="preserve">
+    <value>Limpar</value>
+  </data>
+  <data name="buttonSalvar.Text" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="buttonValidade.Text" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="checkBox4Queijos.Text" xml:space="preserve">
+    <value>4 Queijos</value>
+  </data>
+  <data name="checkBoxAplicar.Text" xml:space="preserve">
+    <value>Aplicar Agora!</value>
+  </data>
+  <data name="checkBoxCalabresa.Text" xml:space="preserve">
+    <value>Calabresa</value>
+  </data>
+  <data name="checkBoxChocolateBranco.Text" xml:space="preserve">
+    <value>Chocolate Branco</value>
+  </data>
+  <data name="checkBoxChocolatePreto.Text" xml:space="preserve">
+    <value>Chocolate Preto</value>
+  </data>
+  <data name="checkBoxDoritos.Text" xml:space="preserve">
+    <value>Doritos</value>
+  </data>
+  <data name="checkBoxFilécomPalhas.Text" xml:space="preserve">
+    <value>Filé com Palhas</value>
+  </data>
+  <data name="checkBoxMargherita.Text" xml:space="preserve">
+    <value>Maegherita</value>
+  </data>
+  <data name="checkBoxPortuguesa.Text" xml:space="preserve">
+    <value>Portuguesa</value>
+  </data>
+  <data name="comboBoxCategoria.Text" xml:space="preserve">
+    <value>Categoria</value>
+  </data>
+  <data name="comboBoxIdioma.Text" xml:space="preserve">
+    <value>Idioma/Regiao</value>
+  </data>
+  <data name="comboBoxQtdBebida.Text" xml:space="preserve">
+    <value>Quantidade bebida</value>
+  </data>
+  <data name="comboBoxTamanho.Text" xml:space="preserve">
+    <value>Selecione</value>
+  </data>
+  <data name="comboBoxTipoBebida.Text" xml:space="preserve">
+    <value>Tipo Bebida</value>
+  </data>
+  <data name="confirm" xml:space="preserve">
+    <value>Deseja enviar para a bandeija? </value>
+  </data>
+  <data name="confirmidioma" xml:space="preserve">
+    <value>Idioma/região alterada com sucesso!</value>
+  </data>
+  <data name="dadosok" xml:space="preserve">
+    <value>Dados inseridos com sucesso!</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="imgInicio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\imagem\imgInicio.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="labelBairro.Text1" xml:space="preserve">
+    <value>Bairro</value>
+  </data>
+  <data name="labelBairroCliente.Text" xml:space="preserve">
+    <value>Bairro</value>
+  </data>
+  <data name="labelCategoriaPizza.Text" xml:space="preserve">
+    <value>Categoria</value>
+  </data>
+  <data name="labelCNH.Text" xml:space="preserve">
+    <value>CNH</value>
+  </data>
+  <data name="labelComplementoCliente.Text" xml:space="preserve">
+    <value>Complemento</value>
+  </data>
+  <data name="labelCPF.Text" xml:space="preserve">
+    <value>CPF</value>
+  </data>
+  <data name="labelCPFcliente.Text" xml:space="preserve">
+    <value>CPF</value>
+  </data>
+  <data name="labelEndereco.Text" xml:space="preserve">
+    <value>Endereço</value>
+  </data>
+  <data name="labelEndereçoCliente.Text" xml:space="preserve">
+    <value>Endereço</value>
+  </data>
+  <data name="labelFotoDaPizza.Text" xml:space="preserve">
+    <value>Foto do Sabor</value>
+  </data>
+  <data name="labelFuncao.Text" xml:space="preserve">
+    <value>Função</value>
+  </data>
+  <data name="labelIDingredientes.Text" xml:space="preserve">
+    <value>Ingredientes</value>
+  </data>
+  <data name="labelIDpizza.Text" xml:space="preserve">
+    <value>ID Pizza</value>
+  </data>
+  <data name="labelIngredientesPizza.Text" xml:space="preserve">
+    <value>Ingredientes da Pizza</value>
+  </data>
+  <data name="labelMatricula.Text" xml:space="preserve">
+    <value>Matricula</value>
+  </data>
+  <data name="labelNome.Text" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="labelNomeBebida.Text" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="labelNomeCliente.Text" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="labelNomeIngrediente.Text" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="labelNomePizza.Text" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="labelNumCliente.Text" xml:space="preserve">
+    <value>Numero</value>
+  </data>
+  <data name="labelOutraBebida.Text" xml:space="preserve">
+    <value>Outra</value>
+  </data>
+  <data name="labelRuaCliente.Text" xml:space="preserve">
+    <value>Rua</value>
+  </data>
+  <data name="labelSenha.Text" xml:space="preserve">
+    <value>Senha</value>
+  </data>
+  <data name="labelTamanhoBebida.Text" xml:space="preserve">
+    <value>Tamanho</value>
+  </data>
+  <data name="labelTamanhoPizza.Text" xml:space="preserve">
+    <value>Tamanho</value>
+  </data>
+  <data name="labelTel.Text" xml:space="preserve">
+    <value>Telefone</value>
+  </data>
+  <data name="labelTelCliente.Text" xml:space="preserve">
+    <value>Telefone</value>
+  </data>
+  <data name="labelTipobebida.Text" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="labelValidade.Text" xml:space="preserve">
+    <value>Validade</value>
+  </data>
+  <data name="labelValorBebida.Text" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="labelValorBorda.Text" xml:space="preserve">
+    <value>Valor Borda</value>
+  </data>
+  <data name="labelValorPizza.Text" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="moeda" xml:space="preserve">
+    <value>R$</value>
+  </data>
+</root>
