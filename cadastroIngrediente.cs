@@ -10,8 +10,6 @@ using System.Windows.Forms;
 using ProjetoDevSistemas2023Vini.DAO;
 using System.Configuration;
 
-
-
 namespace ProjetoDevSistemas2023Vini
 {
 
