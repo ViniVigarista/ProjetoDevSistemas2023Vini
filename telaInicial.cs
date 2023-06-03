@@ -1,4 +1,5 @@
 using System.Configuration;
+using System.Data.Common;
 using System.Runtime.CompilerServices;
 using System.Runtime.ConstrainedExecution;
 
@@ -37,11 +38,13 @@ namespace ProjetoDevSistemas2023Vini
             configuraçõesToolStripMenuItem.ShortcutKeys = Keys.Shift | Keys.F7;
             sairToolStripMenuItem.ShortcutKeys = Keys.Shift | Keys.F8;
 
-
+             
+            
 
 
         }
 
+      
 
         public void telaInicial_Resize(object sender, EventArgs e)
         {
@@ -117,6 +120,7 @@ namespace ProjetoDevSistemas2023Vini
             clientes.Show();
             DisposeAllButThis(this);
             this.KeyDown += new KeyEventHandler(Funcoes.FormEventoKeyDown!);
+            
         }
 
         private void buttonFuncionarios(object sender, EventArgs e)

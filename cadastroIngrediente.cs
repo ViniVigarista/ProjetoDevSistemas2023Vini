@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProjetoDevSistemas2023Vini.DAO;
 using System.Configuration;
+using System.ComponentModel.DataAnnotations;
 
 namespace ProjetoDevSistemas2023Vini
 {
@@ -24,7 +25,7 @@ namespace ProjetoDevSistemas2023Vini
         {
 
             InitializeComponent();
-            
+
 
 
             //pegar dados banco de dados
@@ -49,9 +50,12 @@ namespace ProjetoDevSistemas2023Vini
 
         }
 
+
+
         private void Ingredientes_Load(object sender, EventArgs e)
         {
             BackColor = Color.LightBlue;
+            dataGridViewDados.BackgroundColor = Color.LightBlue;
         }
 
         private void buttonCancelarIngrediente_Click(object sender, EventArgs e)
@@ -62,24 +66,37 @@ namespace ProjetoDevSistemas2023Vini
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
 
-            var ingrediente = new Ingrediente
-            {
-                Id = 0,
-                Nome = textBoxNomeIngrediente.Text,
-            };
 
-            try
+
+            if (string.IsNullOrEmpty(textBoxNomeIngrediente.Text))
             {
-                // chama o método para inserir da camada model
-                dao.InserirDbProvider(ingrediente);
-                MessageBox.Show(Properties.Resources.dadosok, "");
+                textBoxNomeIngrediente.BackColor = Color.Red;
+                MessageBox.Show("Ingredientes não pode estar vazio!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                var ingrediente = new Ingrediente
+                {
+                    Id = 0,
+                    Nome = textBoxNomeIngrediente.Text,
+                };
+                try
+                {
+                    // chama o método para inserir da camada model
+                    dao.InserirDbProvider(ingrediente);
+                    MessageBox.Show(Properties.Resources.dadosok, "");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                AtualizarTela();
+
             }
 
-            AtualizarTela();
+
         }
 
         private void AtualizarTela()
@@ -95,6 +112,7 @@ namespace ProjetoDevSistemas2023Vini
                 dataGridViewDados.AutoGenerateColumns = true;
                 dataGridViewDados.DataSource = linhas;
                 dataGridViewDados.Refresh();
+
             }
             catch (Exception ex)
             {
@@ -104,9 +122,23 @@ namespace ProjetoDevSistemas2023Vini
 
         private void textBoxNomeIngrediente_TextChanged(object sender, EventArgs e)
         {
+            textBoxNomeIngrediente.MaxLength = 20;
+
+
+
+
+
 
         }
 
+        private void dataGridViewDados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
+
+        private void buttonListaIngredientes_Click(object sender, EventArgs e)
+        {
+            AtualizarTela();
+        }
     }
 }

@@ -35,6 +35,7 @@
             buttonCancelar = new Button();
             buttonSalvar = new Button();
             dataGridViewDados = new DataGridView();
+            buttonListaIngredientes = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewDados).BeginInit();
             SuspendLayout();
             // 
@@ -93,18 +94,33 @@
             // 
             // dataGridViewDados
             // 
+            dataGridViewDados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewDados.BorderStyle = BorderStyle.None;
             dataGridViewDados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewDados.Location = new Point(347, -2);
+            dataGridViewDados.GridColor = SystemColors.HotTrack;
+            dataGridViewDados.Location = new Point(355, 52);
             dataGridViewDados.Name = "dataGridViewDados";
             dataGridViewDados.RowTemplate.Height = 25;
             dataGridViewDados.Size = new Size(410, 392);
             dataGridViewDados.TabIndex = 19;
+            dataGridViewDados.CellContentClick += dataGridViewDados_CellContentClick;
+            // 
+            // buttonListaIngredientes
+            // 
+            buttonListaIngredientes.Location = new Point(203, 205);
+            buttonListaIngredientes.Name = "buttonListaIngredientes";
+            buttonListaIngredientes.Size = new Size(75, 23);
+            buttonListaIngredientes.TabIndex = 20;
+            buttonListaIngredientes.Text = "Lista";
+            buttonListaIngredientes.UseVisualStyleBackColor = true;
+            buttonListaIngredientes.Click += buttonListaIngredientes_Click;
             // 
             // Ingredientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(814, 402);
+            ClientSize = new Size(814, 661);
+            Controls.Add(buttonListaIngredientes);
             Controls.Add(dataGridViewDados);
             Controls.Add(buttonCancelar);
             Controls.Add(buttonSalvar);
@@ -117,6 +133,7 @@
             Name = "Ingredientes";
             ShowIcon = false;
             Text = "Cadastro Ingrediente";
+            TransparencyKey = Color.FromArgb(0, 0, 192);
             WindowState = FormWindowState.Maximized;
             Load += Ingredientes_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewDados).EndInit();
@@ -133,5 +150,6 @@
         private Button buttonCancelar;
         private Button buttonSalvar;
         private DataGridView dataGridViewDados;
+        private Button buttonListaIngredientes;
     }
 }

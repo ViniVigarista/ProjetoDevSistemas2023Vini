@@ -32,19 +32,34 @@
             textBoxNomeCliente = new TextBox();
             labelTelCliente = new Label();
             labelCPFcliente = new Label();
-            textBoxRuaCliente = new TextBox();
+            textBoxLogradouro = new TextBox();
             labelRuaCliente = new Label();
             labelEndereçoCliente = new Label();
-            textBoxNumCliente = new TextBox();
+            textBoxNumCasa = new TextBox();
             labelNumCliente = new Label();
-            textBoxBairroCliente = new TextBox();
+            textBoxBairro = new TextBox();
             labelBairroCliente = new Label();
             textBoxComplementoCliente = new TextBox();
             labelComplementoCliente = new Label();
             buttonSalvar = new Button();
             buttonCancelar = new Button();
-            maskedTextBox1 = new MaskedTextBox();
-            maskedTextBox2 = new MaskedTextBox();
+            maskedTextBoxTelefone = new MaskedTextBox();
+            maskedTextBoxCPF = new MaskedTextBox();
+            labelCEP = new Label();
+            maskedTextBoxCep = new MaskedTextBox();
+            label1 = new Label();
+            textBoxEmail = new TextBox();
+            textBoxCidade = new TextBox();
+            label2 = new Label();
+            label3 = new Label();
+            textBoxPais = new TextBox();
+            label4 = new Label();
+            label5 = new Label();
+            textBoxID = new TextBox();
+            label6 = new Label();
+            comboBoxUF = new ComboBox();
+            buttonListaEndereco = new Button();
+            buttonListaClientes = new Button();
             SuspendLayout();
             // 
             // labelNomeCliente
@@ -58,7 +73,7 @@
             // 
             // textBoxNomeCliente
             // 
-            textBoxNomeCliente.Location = new Point(137, 57);
+            textBoxNomeCliente.Location = new Point(99, 57);
             textBoxNomeCliente.Name = "textBoxNomeCliente";
             textBoxNomeCliente.Size = new Size(260, 23);
             textBoxNomeCliente.TabIndex = 1;
@@ -83,17 +98,17 @@
             labelCPFcliente.Text = "CPF";
             labelCPFcliente.UseMnemonic = false;
             // 
-            // textBoxRuaCliente
+            // textBoxLogradouro
             // 
-            textBoxRuaCliente.Location = new Point(137, 210);
-            textBoxRuaCliente.Name = "textBoxRuaCliente";
-            textBoxRuaCliente.Size = new Size(260, 23);
-            textBoxRuaCliente.TabIndex = 7;
+            textBoxLogradouro.Location = new Point(458, 125);
+            textBoxLogradouro.Name = "textBoxLogradouro";
+            textBoxLogradouro.Size = new Size(333, 23);
+            textBoxLogradouro.TabIndex = 9;
             // 
             // labelRuaCliente
             // 
             labelRuaCliente.AutoSize = true;
-            labelRuaCliente.Location = new Point(40, 213);
+            labelRuaCliente.Location = new Point(458, 105);
             labelRuaCliente.Name = "labelRuaCliente";
             labelRuaCliente.Size = new Size(27, 15);
             labelRuaCliente.TabIndex = 6;
@@ -103,41 +118,41 @@
             // labelEndereçoCliente
             // 
             labelEndereçoCliente.AutoSize = true;
-            labelEndereçoCliente.Location = new Point(201, 181);
+            labelEndereçoCliente.Location = new Point(546, 9);
             labelEndereçoCliente.Name = "labelEndereçoCliente";
             labelEndereçoCliente.Size = new Size(106, 15);
             labelEndereçoCliente.TabIndex = 8;
             labelEndereçoCliente.Text = "Cadastro Endereço";
             labelEndereçoCliente.UseMnemonic = false;
             // 
-            // textBoxNumCliente
+            // textBoxNumCasa
             // 
-            textBoxNumCliente.Location = new Point(137, 249);
-            textBoxNumCliente.Name = "textBoxNumCliente";
-            textBoxNumCliente.Size = new Size(260, 23);
-            textBoxNumCliente.TabIndex = 10;
+            textBoxNumCasa.Location = new Point(578, 57);
+            textBoxNumCasa.Name = "textBoxNumCasa";
+            textBoxNumCasa.Size = new Size(63, 23);
+            textBoxNumCasa.TabIndex = 7;
             // 
             // labelNumCliente
             // 
             labelNumCliente.AutoSize = true;
-            labelNumCliente.Location = new Point(40, 252);
+            labelNumCliente.Location = new Point(578, 39);
             labelNumCliente.Name = "labelNumCliente";
             labelNumCliente.Size = new Size(51, 15);
             labelNumCliente.TabIndex = 9;
             labelNumCliente.Text = "Numero";
             labelNumCliente.UseMnemonic = false;
             // 
-            // textBoxBairroCliente
+            // textBoxBairro
             // 
-            textBoxBairroCliente.Location = new Point(137, 288);
-            textBoxBairroCliente.Name = "textBoxBairroCliente";
-            textBoxBairroCliente.Size = new Size(260, 23);
-            textBoxBairroCliente.TabIndex = 12;
+            textBoxBairro.Location = new Point(674, 60);
+            textBoxBairro.Name = "textBoxBairro";
+            textBoxBairro.Size = new Size(98, 23);
+            textBoxBairro.TabIndex = 8;
             // 
             // labelBairroCliente
             // 
             labelBairroCliente.AutoSize = true;
-            labelBairroCliente.Location = new Point(40, 291);
+            labelBairroCliente.Location = new Point(696, 42);
             labelBairroCliente.Name = "labelBairroCliente";
             labelBairroCliente.Size = new Size(38, 15);
             labelBairroCliente.TabIndex = 11;
@@ -146,15 +161,15 @@
             // 
             // textBoxComplementoCliente
             // 
-            textBoxComplementoCliente.Location = new Point(137, 327);
+            textBoxComplementoCliente.Location = new Point(459, 242);
             textBoxComplementoCliente.Name = "textBoxComplementoCliente";
-            textBoxComplementoCliente.Size = new Size(260, 23);
-            textBoxComplementoCliente.TabIndex = 14;
+            textBoxComplementoCliente.Size = new Size(176, 23);
+            textBoxComplementoCliente.TabIndex = 13;
             // 
             // labelComplementoCliente
             // 
             labelComplementoCliente.AutoSize = true;
-            labelComplementoCliente.Location = new Point(40, 330);
+            labelComplementoCliente.Location = new Point(459, 224);
             labelComplementoCliente.Name = "labelComplementoCliente";
             labelComplementoCliente.Size = new Size(84, 15);
             labelComplementoCliente.TabIndex = 13;
@@ -163,56 +178,211 @@
             // 
             // buttonSalvar
             // 
-            buttonSalvar.Location = new Point(322, 398);
+            buttonSalvar.Location = new Point(697, 288);
             buttonSalvar.Name = "buttonSalvar";
             buttonSalvar.Size = new Size(75, 23);
             buttonSalvar.TabIndex = 15;
             buttonSalvar.Text = "Salvar";
             buttonSalvar.UseVisualStyleBackColor = true;
+            buttonSalvar.Click += buttonSalvar_Click;
             // 
             // buttonCancelar
             // 
-            buttonCancelar.Location = new Point(232, 398);
+            buttonCancelar.Location = new Point(607, 288);
             buttonCancelar.Name = "buttonCancelar";
             buttonCancelar.Size = new Size(75, 23);
-            buttonCancelar.TabIndex = 16;
+            buttonCancelar.TabIndex = 14;
             buttonCancelar.Text = "Cancelar";
             buttonCancelar.UseVisualStyleBackColor = true;
             buttonCancelar.Click += buttonCancelarCliente_Click;
             // 
-            // maskedTextBox1
+            // maskedTextBoxTelefone
             // 
-            maskedTextBox1.Location = new Point(137, 100);
-            maskedTextBox1.Mask = "(00) 0 0000-0000";
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(260, 23);
-            maskedTextBox1.TabIndex = 17;
+            maskedTextBoxTelefone.Location = new Point(99, 100);
+            maskedTextBoxTelefone.Mask = "(00) 0 0000-0000";
+            maskedTextBoxTelefone.Name = "maskedTextBoxTelefone";
+            maskedTextBoxTelefone.Size = new Size(260, 23);
+            maskedTextBoxTelefone.TabIndex = 2;
+            maskedTextBoxTelefone.MaskInputRejected += maskedTextBoxTelefone_MaskInputRejected;
             // 
-            // maskedTextBox2
+            // maskedTextBoxCPF
             // 
-            maskedTextBox2.Location = new Point(137, 135);
-            maskedTextBox2.Mask = "000.000.000-00";
-            maskedTextBox2.Name = "maskedTextBox2";
-            maskedTextBox2.Size = new Size(260, 23);
-            maskedTextBox2.TabIndex = 18;
+            maskedTextBoxCPF.Location = new Point(99, 135);
+            maskedTextBoxCPF.Mask = "000.000.000-00";
+            maskedTextBoxCPF.Name = "maskedTextBoxCPF";
+            maskedTextBoxCPF.Size = new Size(260, 23);
+            maskedTextBoxCPF.TabIndex = 3;
+            maskedTextBoxCPF.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // labelCEP
+            // 
+            labelCEP.AutoSize = true;
+            labelCEP.Location = new Point(459, 39);
+            labelCEP.Name = "labelCEP";
+            labelCEP.Size = new Size(28, 15);
+            labelCEP.TabIndex = 19;
+            labelCEP.Text = "CEP";
+            labelCEP.UseMnemonic = false;
+            // 
+            // maskedTextBoxCep
+            // 
+            maskedTextBoxCep.Location = new Point(459, 60);
+            maskedTextBoxCep.Mask = "00.000-000";
+            maskedTextBoxCep.Name = "maskedTextBoxCep";
+            maskedTextBoxCep.Size = new Size(85, 23);
+            maskedTextBoxCep.TabIndex = 6;
+            maskedTextBoxCep.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            maskedTextBoxCep.Leave += maskedTextBoxCep_Leave;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(40, 184);
+            label1.Name = "label1";
+            label1.Size = new Size(41, 15);
+            label1.TabIndex = 21;
+            label1.Text = "E-mail";
+            label1.UseMnemonic = false;
+            // 
+            // textBoxEmail
+            // 
+            textBoxEmail.Location = new Point(99, 181);
+            textBoxEmail.Name = "textBoxEmail";
+            textBoxEmail.Size = new Size(260, 23);
+            textBoxEmail.TabIndex = 4;
+            // 
+            // textBoxCidade
+            // 
+            textBoxCidade.Location = new Point(459, 181);
+            textBoxCidade.Name = "textBoxCidade";
+            textBoxCidade.Size = new Size(98, 23);
+            textBoxCidade.TabIndex = 10;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(483, 163);
+            label2.Name = "label2";
+            label2.Size = new Size(44, 15);
+            label2.TabIndex = 23;
+            label2.Text = "Cidade";
+            label2.UseMnemonic = false;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(608, 163);
+            label3.Name = "label3";
+            label3.Size = new Size(21, 15);
+            label3.TabIndex = 25;
+            label3.Text = "UF";
+            label3.UseMnemonic = false;
+            // 
+            // textBoxPais
+            // 
+            textBoxPais.Location = new Point(679, 184);
+            textBoxPais.Name = "textBoxPais";
+            textBoxPais.Size = new Size(94, 23);
+            textBoxPais.TabIndex = 12;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(714, 163);
+            label4.Name = "label4";
+            label4.Size = new Size(28, 15);
+            label4.TabIndex = 27;
+            label4.Text = "Pais";
+            label4.UseMnemonic = false;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(152, 9);
+            label5.Name = "label5";
+            label5.Size = new Size(94, 15);
+            label5.TabIndex = 29;
+            label5.Text = "Cadastro Cliente";
+            label5.UseMnemonic = false;
+            // 
+            // textBoxID
+            // 
+            textBoxID.Location = new Point(99, 216);
+            textBoxID.Name = "textBoxID";
+            textBoxID.Size = new Size(38, 23);
+            textBoxID.TabIndex = 5;
+            textBoxID.Visible = false;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(40, 219);
+            label6.Name = "label6";
+            label6.Size = new Size(18, 15);
+            label6.TabIndex = 30;
+            label6.Text = "ID";
+            label6.UseMnemonic = false;
+            // 
+            // comboBoxUF
+            // 
+            comboBoxUF.FormattingEnabled = true;
+            comboBoxUF.Location = new Point(597, 184);
+            comboBoxUF.Name = "comboBoxUF";
+            comboBoxUF.Size = new Size(38, 23);
+            comboBoxUF.TabIndex = 11;
+            // 
+            // buttonListaEndereco
+            // 
+            buttonListaEndereco.Location = new Point(62, 278);
+            buttonListaEndereco.Name = "buttonListaEndereco";
+            buttonListaEndereco.Size = new Size(75, 23);
+            buttonListaEndereco.TabIndex = 16;
+            buttonListaEndereco.Text = "Endereços";
+            buttonListaEndereco.UseVisualStyleBackColor = true;
+            buttonListaEndereco.Click += buttonListaEndereco_Click;
+            // 
+            // buttonListaClientes
+            // 
+            buttonListaClientes.Location = new Point(171, 278);
+            buttonListaClientes.Name = "buttonListaClientes";
+            buttonListaClientes.Size = new Size(75, 23);
+            buttonListaClientes.TabIndex = 17;
+            buttonListaClientes.Text = "Clientes";
+            buttonListaClientes.UseVisualStyleBackColor = true;
+            buttonListaClientes.Click += buttonListaClientes_Click;
             // 
             // Clientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(435, 450);
-            Controls.Add(maskedTextBox2);
-            Controls.Add(maskedTextBox1);
+            ClientSize = new Size(803, 339);
+            Controls.Add(buttonListaClientes);
+            Controls.Add(buttonListaEndereco);
+            Controls.Add(comboBoxUF);
+            Controls.Add(textBoxID);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(textBoxPais);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(textBoxCidade);
+            Controls.Add(label2);
+            Controls.Add(textBoxEmail);
+            Controls.Add(label1);
+            Controls.Add(maskedTextBoxCep);
+            Controls.Add(labelCEP);
+            Controls.Add(maskedTextBoxCPF);
+            Controls.Add(maskedTextBoxTelefone);
             Controls.Add(buttonCancelar);
             Controls.Add(buttonSalvar);
             Controls.Add(textBoxComplementoCliente);
             Controls.Add(labelComplementoCliente);
-            Controls.Add(textBoxBairroCliente);
+            Controls.Add(textBoxBairro);
             Controls.Add(labelBairroCliente);
-            Controls.Add(textBoxNumCliente);
+            Controls.Add(textBoxNumCasa);
             Controls.Add(labelNumCliente);
             Controls.Add(labelEndereçoCliente);
-            Controls.Add(textBoxRuaCliente);
+            Controls.Add(textBoxLogradouro);
             Controls.Add(labelRuaCliente);
             Controls.Add(labelCPFcliente);
             Controls.Add(labelTelCliente);
@@ -234,18 +404,33 @@
         private TextBox textBoxNomeCliente;
         private Label labelTelCliente;
         private Label labelCPFcliente;
-        private TextBox textBoxRuaCliente;
+        private TextBox textBoxLogradouro;
         private Label labelRuaCliente;
         private Label labelEndereçoCliente;
-        private TextBox textBoxNumCliente;
+        private TextBox textBoxNumCasa;
         private Label labelNumCliente;
-        private TextBox textBoxBairroCliente;
+        private TextBox textBoxBairro;
         private Label labelBairroCliente;
         private TextBox textBoxComplementoCliente;
         private Label labelComplementoCliente;
         private Button buttonSalvar;
         private Button buttonCancelar;
-        private MaskedTextBox maskedTextBox1;
-        private MaskedTextBox maskedTextBox2;
+        private MaskedTextBox maskedTextBoxTelefone;
+        private MaskedTextBox maskedTextBoxCPF;
+        private Label labelCEP;
+        private MaskedTextBox maskedTextBoxCep;
+        private Label label1;
+        private TextBox textBoxEmail;
+        private TextBox textBoxCidade;
+        private Label label2;
+        private Label label3;
+        private TextBox textBoxPais;
+        private Label label4;
+        private Label label5;
+        private TextBox textBoxID;
+        private Label label6;
+        private ComboBox comboBoxUF;
+        private Button buttonListaEndereco;
+        private Button buttonListaClientes;
     }
 }

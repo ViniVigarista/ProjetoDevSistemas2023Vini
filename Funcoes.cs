@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 namespace ProjetoDevSistemas2023Vini
 {
@@ -121,11 +122,41 @@ namespace ProjetoDevSistemas2023Vini
             }
         }
 
-        
-
-        
-
        
+/// string hash = ClassFuncoes.Sha256Hash(textBoxSenha.Text);
+        public static string Sha256Hash(string senha)
+    {
+        // Create a new Stringbuilder to collect the bytes and create a string.
+        var hash = new StringBuilder();
+        using (SHA256 sha256Hash = SHA256.Create())
+        {
+            // Convert the input string to a byte array and compute the hash.
+            byte[] data = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(senha));
+            // Loop through each byte of the hashed data and format each one as a hexadecimal string.
+            for (int i = 0; i < data.Length; i++)
+            {
+                hash.Append(data[i].ToString("x2"));
+            }
+        }
+        // retorna o hash SHA256.
+        return hash.ToString();
+    }
+
+        public static byte[] ConverteImagemParaByteArray(Image img)
+        {
+            MemoryStream ms = new();
+            if (img != null)
+            {
+                img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            }
+            return ms.ToArray();
+        }
+
+
+
+
+
+
     }
         
             

@@ -31,8 +31,6 @@
             IDpizza = new Label();
             textBoxIDpizza = new TextBox();
             labelValorPizza = new Label();
-            comboBoxTamanho = new ComboBox();
-            comboBoxCategoria = new ComboBox();
             labelTamanhoPizza = new Label();
             labelCategoriaPizza = new Label();
             buttonCancelar = new Button();
@@ -40,12 +38,17 @@
             labelValorBorda = new Label();
             textBoxValor = new TextBox();
             textBoxvalorBorda = new TextBox();
+            listBoxTamanho = new ListBox();
+            listBoxCategoria = new ListBox();
+            dataGridViewDados = new DataGridView();
+            buttonSabores = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewDados).BeginInit();
             SuspendLayout();
             // 
             // IDpizza
             // 
             IDpizza.AutoSize = true;
-            IDpizza.Location = new Point(45, 60);
+            IDpizza.Location = new Point(45, 24);
             IDpizza.Name = "IDpizza";
             IDpizza.Size = new Size(18, 15);
             IDpizza.TabIndex = 0;
@@ -53,45 +56,24 @@
             // 
             // textBoxIDpizza
             // 
-            textBoxIDpizza.Location = new Point(69, 57);
+            textBoxIDpizza.Location = new Point(69, 21);
             textBoxIDpizza.Name = "textBoxIDpizza";
             textBoxIDpizza.Size = new Size(100, 23);
             textBoxIDpizza.TabIndex = 1;
-            textBoxIDpizza.TextChanged += textBoxIDpizza_TextChanged;
             // 
             // labelValorPizza
             // 
             labelValorPizza.AutoSize = true;
-            labelValorPizza.Location = new Point(46, 214);
+            labelValorPizza.Location = new Point(16, 213);
             labelValorPizza.Name = "labelValorPizza";
             labelValorPizza.Size = new Size(33, 15);
             labelValorPizza.TabIndex = 2;
             labelValorPizza.Text = "Valor";
             // 
-            // comboBoxTamanho
-            // 
-            comboBoxTamanho.FormattingEnabled = true;
-            comboBoxTamanho.Items.AddRange(new object[] { "Pequena", "Media", "Grande", "Familia" });
-            comboBoxTamanho.Location = new Point(107, 109);
-            comboBoxTamanho.Name = "comboBoxTamanho";
-            comboBoxTamanho.Size = new Size(121, 23);
-            comboBoxTamanho.TabIndex = 2;
-            comboBoxTamanho.Text = "Selecione";
-            // 
-            // comboBoxCategoria
-            // 
-            comboBoxCategoria.FormattingEnabled = true;
-            comboBoxCategoria.Items.AddRange(new object[] { "Tradicional", "Especial" });
-            comboBoxCategoria.Location = new Point(107, 157);
-            comboBoxCategoria.Name = "comboBoxCategoria";
-            comboBoxCategoria.Size = new Size(121, 23);
-            comboBoxCategoria.TabIndex = 3;
-            comboBoxCategoria.Text = "Selecione";
-            // 
             // labelTamanhoPizza
             // 
             labelTamanhoPizza.AutoSize = true;
-            labelTamanhoPizza.Location = new Point(45, 112);
+            labelTamanhoPizza.Location = new Point(55, 65);
             labelTamanhoPizza.Name = "labelTamanhoPizza";
             labelTamanhoPizza.Size = new Size(56, 15);
             labelTamanhoPizza.TabIndex = 6;
@@ -100,7 +82,7 @@
             // labelCategoriaPizza
             // 
             labelCategoriaPizza.AutoSize = true;
-            labelCategoriaPizza.Location = new Point(43, 157);
+            labelCategoriaPizza.Location = new Point(225, 65);
             labelCategoriaPizza.Name = "labelCategoriaPizza";
             labelCategoriaPizza.Size = new Size(58, 15);
             labelCategoriaPizza.TabIndex = 7;
@@ -124,20 +106,20 @@
             buttonSalvar.TabIndex = 7;
             buttonSalvar.Text = "Salvar";
             buttonSalvar.UseVisualStyleBackColor = true;
+            buttonSalvar.Click += buttonSalvar_Click;
             // 
             // labelValorBorda
             // 
             labelValorBorda.AutoSize = true;
-            labelValorBorda.Location = new Point(47, 262);
+            labelValorBorda.Location = new Point(193, 213);
             labelValorBorda.Name = "labelValorBorda";
             labelValorBorda.Size = new Size(67, 15);
             labelValorBorda.TabIndex = 21;
             labelValorBorda.Text = "Valor Borda";
-            labelValorBorda.Click += label4_Click;
             // 
             // textBoxValor
             // 
-            textBoxValor.Location = new Point(85, 211);
+            textBoxValor.Location = new Point(55, 210);
             textBoxValor.Name = "textBoxValor";
             textBoxValor.Size = new Size(100, 23);
             textBoxValor.TabIndex = 4;
@@ -145,17 +127,59 @@
             // 
             // textBoxvalorBorda
             // 
-            textBoxvalorBorda.Location = new Point(120, 259);
+            textBoxvalorBorda.Location = new Point(266, 210);
             textBoxvalorBorda.Name = "textBoxvalorBorda";
             textBoxvalorBorda.Size = new Size(100, 23);
             textBoxvalorBorda.TabIndex = 5;
             textBoxvalorBorda.TextChanged += textBoxvalorBorda_TextChanged;
             // 
+            // listBoxTamanho
+            // 
+            listBoxTamanho.FormattingEnabled = true;
+            listBoxTamanho.ItemHeight = 15;
+            listBoxTamanho.Location = new Point(22, 83);
+            listBoxTamanho.Name = "listBoxTamanho";
+            listBoxTamanho.Size = new Size(120, 94);
+            listBoxTamanho.TabIndex = 22;
+            // 
+            // listBoxCategoria
+            // 
+            listBoxCategoria.FormattingEnabled = true;
+            listBoxCategoria.ItemHeight = 15;
+            listBoxCategoria.Location = new Point(193, 83);
+            listBoxCategoria.Name = "listBoxCategoria";
+            listBoxCategoria.Size = new Size(120, 94);
+            listBoxCategoria.TabIndex = 23;
+            // 
+            // dataGridViewDados
+            // 
+            dataGridViewDados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewDados.Location = new Point(448, 27);
+            dataGridViewDados.Name = "dataGridViewDados";
+            dataGridViewDados.RowTemplate.Height = 25;
+            dataGridViewDados.Size = new Size(334, 150);
+            dataGridViewDados.TabIndex = 24;
+            dataGridViewDados.CellFormatting += DataGridViewDados_CellFormatting;
+            // 
+            // buttonSabores
+            // 
+            buttonSabores.Location = new Point(275, 315);
+            buttonSabores.Name = "buttonSabores";
+            buttonSabores.Size = new Size(75, 23);
+            buttonSabores.TabIndex = 25;
+            buttonSabores.Text = "Valores";
+            buttonSabores.UseVisualStyleBackColor = true;
+            buttonSabores.Click += buttonSabores_Click;
+            // 
             // cadastroValores
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(283, 350);
+            ClientSize = new Size(813, 350);
+            Controls.Add(buttonSabores);
+            Controls.Add(dataGridViewDados);
+            Controls.Add(listBoxCategoria);
+            Controls.Add(listBoxTamanho);
             Controls.Add(textBoxvalorBorda);
             Controls.Add(textBoxValor);
             Controls.Add(labelValorBorda);
@@ -163,8 +187,6 @@
             Controls.Add(buttonSalvar);
             Controls.Add(labelCategoriaPizza);
             Controls.Add(labelTamanhoPizza);
-            Controls.Add(comboBoxCategoria);
-            Controls.Add(comboBoxTamanho);
             Controls.Add(labelValorPizza);
             Controls.Add(textBoxIDpizza);
             Controls.Add(IDpizza);
@@ -174,6 +196,7 @@
             Text = "Form6";
             WindowState = FormWindowState.Maximized;
             Load += cadastroValores_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridViewDados).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -183,8 +206,6 @@
         private Label IDpizza;
         private TextBox textBoxIDpizza;
         private Label labelValorPizza;
-        private ComboBox comboBoxTamanho;
-        private ComboBox comboBoxCategoria;
         private Label labelTamanhoPizza;
         private Label labelCategoriaPizza;
         private Button buttonCancelar;
@@ -194,5 +215,9 @@
         private MaskedTextBox maskedTextBox2;
         private TextBox textBoxValor;
         private TextBox textBoxvalorBorda;
+        private ListBox listBoxTamanho;
+        private ListBox listBoxCategoria;
+        private DataGridView dataGridViewDados;
+        private Button buttonSabores;
     }
 }
