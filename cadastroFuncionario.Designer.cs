@@ -75,6 +75,8 @@
             comboBox1 = new ComboBox();
             dataGridViewDados = new DataGridView();
             buttonlistaFunc = new Button();
+            buttonEditar = new Button();
+            buttonExcluir = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewDados).BeginInit();
             SuspendLayout();
             // 
@@ -454,18 +456,22 @@
             // 
             // dataGridViewDados
             // 
+            dataGridViewDados.AllowUserToAddRows = false;
             dataGridViewDados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewDados.EditMode = DataGridViewEditMode.EditProgrammatically;
             dataGridViewDados.Location = new Point(772, 32);
+            dataGridViewDados.MultiSelect = false;
             dataGridViewDados.Name = "dataGridViewDados";
             dataGridViewDados.RowTemplate.Height = 25;
-            dataGridViewDados.Size = new Size(700, 90);
+            dataGridViewDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewDados.Size = new Size(700, 306);
             dataGridViewDados.TabIndex = 44;
-           
+            dataGridViewDados.CellContentClick += dataGridViewDados_CellContentClick;
             dataGridViewDados.CellFormatting += DataGridViewDados_CellFormatting;
             // 
             // buttonlistaFunc
             // 
-            buttonlistaFunc.Location = new Point(579, 411);
+            buttonlistaFunc.Location = new Point(1196, 411);
             buttonlistaFunc.Name = "buttonlistaFunc";
             buttonlistaFunc.Size = new Size(128, 23);
             buttonlistaFunc.TabIndex = 45;
@@ -473,11 +479,33 @@
             buttonlistaFunc.UseVisualStyleBackColor = true;
             buttonlistaFunc.Click += buttonlistaFunc_Click;
             // 
+            // buttonEditar
+            // 
+            buttonEditar.Location = new Point(1084, 411);
+            buttonEditar.Name = "buttonEditar";
+            buttonEditar.Size = new Size(75, 23);
+            buttonEditar.TabIndex = 46;
+            buttonEditar.Text = "Editar";
+            buttonEditar.UseVisualStyleBackColor = true;
+            buttonEditar.Click += buttonEditar_Click;
+            // 
+            // buttonExcluir
+            // 
+            buttonExcluir.Location = new Point(1003, 411);
+            buttonExcluir.Name = "buttonExcluir";
+            buttonExcluir.Size = new Size(75, 23);
+            buttonExcluir.TabIndex = 47;
+            buttonExcluir.Text = "Excluir";
+            buttonExcluir.UseVisualStyleBackColor = true;
+            buttonExcluir.Click += buttonExcluir_Click;
+            // 
             // Funcionarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1386, 450);
+            ClientSize = new Size(1505, 450);
+            Controls.Add(buttonExcluir);
+            Controls.Add(buttonEditar);
             Controls.Add(buttonlistaFunc);
             Controls.Add(dataGridViewDados);
             Controls.Add(comboBox1);
@@ -582,5 +610,7 @@
         private ComboBox comboBox1;
         private DataGridView dataGridViewDados;
         private Button buttonlistaFunc;
+        private Button buttonEditar;
+        private Button buttonExcluir;
     }
 }

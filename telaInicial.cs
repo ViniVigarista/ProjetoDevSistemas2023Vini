@@ -18,9 +18,9 @@ namespace ProjetoDevSistemas2023Vini
             Funcoes.AjustaResourcesControl(this);
             Funcoes.EventoFocoCampos(this);
             this.KeyDown += new KeyEventHandler(Funcoes.FormEventoKeyDown!);
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(FormIsClosing!);
+            this.FormClosing += new FormClosingEventHandler(FormIsClosing!);
             this.Resize += new EventHandler(telaInicial_Resize!);
-            
+
 
             inicioToolStripMenuItem.Click += new EventHandler(principal_Click!);
             inicioToolStripMenuItem.ShortcutKeys = Keys.Shift | Keys.F1;
@@ -38,13 +38,13 @@ namespace ProjetoDevSistemas2023Vini
             configuraçõesToolStripMenuItem.ShortcutKeys = Keys.Shift | Keys.F7;
             sairToolStripMenuItem.ShortcutKeys = Keys.Shift | Keys.F8;
 
-             
-            
+
+
 
 
         }
 
-      
+
 
         public void telaInicial_Resize(object sender, EventArgs e)
         {
@@ -112,7 +112,7 @@ namespace ProjetoDevSistemas2023Vini
 
 
 
-        private void buttonClientes(object sender, EventArgs e)
+        public void buttonClientes(object sender, EventArgs e)
         {
             Form clientes = new Clientes();
             clientes.TopLevel = false;
@@ -120,7 +120,7 @@ namespace ProjetoDevSistemas2023Vini
             clientes.Show();
             DisposeAllButThis(this);
             this.KeyDown += new KeyEventHandler(Funcoes.FormEventoKeyDown!);
-            
+
         }
 
         private void buttonFuncionarios(object sender, EventArgs e)
@@ -300,6 +300,16 @@ namespace ProjetoDevSistemas2023Vini
 
 
 
+        }
+
+        private void buttonPedidos_Click(object sender, EventArgs e)
+        {
+            Form cadastroPedido = new Pedidos();
+            cadastroPedido.TopLevel = false;
+            panelDados.Controls.Add(cadastroPedido);
+            cadastroPedido.Show();
+            DisposeAllButThis(this);
+            this.KeyDown += new KeyEventHandler(Funcoes.FormEventoKeyDown!);
         }
     }
 }

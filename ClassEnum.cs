@@ -44,6 +44,8 @@ public enum EnumSaborTipo
 
 public enum EnumProdutoTipo
 {
+    [Description("Nenhum")]
+    Nenhum = 'N',
     [Description("Refrigerante")]
     Refrigerante = 'R',
     [Description("Cerveja")]
@@ -58,6 +60,8 @@ public enum EnumProdutoTipo
 
 public enum EnumProdutoTamanho
 {
+    [Description("Nenhum")]
+    Nenhum = 'N',
     [Description("150ML")]
     Pequena = 'P',
     [Description("300")]

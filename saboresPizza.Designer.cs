@@ -41,6 +41,9 @@
             listBoxTipo = new ListBox();
             dataGridViewDados = new DataGridView();
             buttonLista = new Button();
+            textBoxId = new TextBox();
+            buttonEditar = new Button();
+            buttonExcluir = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBoxImagem).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewDados).BeginInit();
             SuspendLayout();
@@ -117,6 +120,7 @@
             checkedListBoxIngredientes.Name = "checkedListBoxIngredientes";
             checkedListBoxIngredientes.Size = new Size(148, 184);
             checkedListBoxIngredientes.TabIndex = 21;
+            checkedListBoxIngredientes.SelectedIndexChanged += checkedListBoxIngredientes_SelectedIndexChanged;
             // 
             // listBoxCategoria
             // 
@@ -138,15 +142,19 @@
             // 
             // dataGridViewDados
             // 
+            dataGridViewDados.AllowUserToAddRows = false;
             dataGridViewDados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridViewDados.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewDados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewDados.Location = new Point(698, 45);
+            dataGridViewDados.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dataGridViewDados.Location = new Point(703, 20);
+            dataGridViewDados.MultiSelect = false;
             dataGridViewDados.Name = "dataGridViewDados";
             dataGridViewDados.RowTemplate.Height = 25;
+            dataGridViewDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewDados.Size = new Size(651, 272);
             dataGridViewDados.TabIndex = 24;
-            dataGridViewDados.CellFormatting += this.DataGridViewDados_CellFormatting;
+            dataGridViewDados.CellFormatting += DataGridViewDados_CellFormatting;
             // 
             // buttonLista
             // 
@@ -158,11 +166,42 @@
             buttonLista.UseVisualStyleBackColor = true;
             buttonLista.Click += buttonLista_Click;
             // 
+            // textBoxId
+            // 
+            textBoxId.Location = new Point(404, 12);
+            textBoxId.Name = "textBoxId";
+            textBoxId.Size = new Size(100, 23);
+            textBoxId.TabIndex = 26;
+            textBoxId.Visible = false;
+            // 
+            // buttonEditar
+            // 
+            buttonEditar.Location = new Point(753, 314);
+            buttonEditar.Name = "buttonEditar";
+            buttonEditar.Size = new Size(75, 23);
+            buttonEditar.TabIndex = 27;
+            buttonEditar.Text = "Editar";
+            buttonEditar.UseVisualStyleBackColor = true;
+            buttonEditar.Click += buttonEditar_Click;
+            // 
+            // buttonExcluir
+            // 
+            buttonExcluir.Location = new Point(843, 314);
+            buttonExcluir.Name = "buttonExcluir";
+            buttonExcluir.Size = new Size(75, 23);
+            buttonExcluir.TabIndex = 28;
+            buttonExcluir.Text = "Excluir";
+            buttonExcluir.UseVisualStyleBackColor = true;
+            buttonExcluir.Click += buttonExcluir_Click;
+            // 
             // Sabores
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1377, 354);
+            Controls.Add(buttonExcluir);
+            Controls.Add(buttonEditar);
+            Controls.Add(textBoxId);
             Controls.Add(buttonLista);
             Controls.Add(dataGridViewDados);
             Controls.Add(listBoxTipo);
@@ -201,5 +240,8 @@
         private ListBox listBoxTipo;
         private DataGridView dataGridViewDados;
         private Button buttonLista;
+        private TextBox textBoxId;
+        private Button buttonEditar;
+        private Button buttonExcluir;
     }
 }

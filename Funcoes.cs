@@ -125,7 +125,7 @@ namespace ProjetoDevSistemas2023Vini
        
 /// string hash = ClassFuncoes.Sha256Hash(textBoxSenha.Text);
         public static string Sha256Hash(string senha)
-    {
+        {
         // Create a new Stringbuilder to collect the bytes and create a string.
         var hash = new StringBuilder();
         using (SHA256 sha256Hash = SHA256.Create())
@@ -140,7 +140,7 @@ namespace ProjetoDevSistemas2023Vini
         }
         // retorna o hash SHA256.
         return hash.ToString();
-    }
+        }
 
         public static byte[] ConverteImagemParaByteArray(Image img)
         {
@@ -150,6 +150,19 @@ namespace ProjetoDevSistemas2023Vini
                 img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
             }
             return ms.ToArray();
+        }
+
+        public static Image? ConverteByteArrayParaImagem(byte[] pData)
+        {
+            try
+            {
+                ImageConverter imgConverter = new();
+                return imgConverter.ConvertFrom(pData) as Image;
+            }
+            catch
+            {
+                return null;
+            }
         }
 
 

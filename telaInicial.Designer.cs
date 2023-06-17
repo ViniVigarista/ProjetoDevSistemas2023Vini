@@ -44,6 +44,8 @@
             botaoPrincipal = new Button();
             Idioma = new Button();
             panel1 = new Panel();
+            pictureBox9 = new PictureBox();
+            buttonPedidos = new Button();
             buttonCor = new Button();
             pictureBox8 = new PictureBox();
             pictureBox7 = new PictureBox();
@@ -66,6 +68,7 @@
             colorDialog1 = new ColorDialog();
             contextMenuStripSystem.SuspendLayout();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -113,9 +116,9 @@
             // 
             // botaoSabores
             // 
-            botaoSabores.Location = new Point(56, 155);
+            botaoSabores.Location = new Point(53, 153);
             botaoSabores.Name = "botaoSabores";
-            botaoSabores.Size = new Size(97, 23);
+            botaoSabores.Size = new Size(97, 30);
             botaoSabores.TabIndex = 4;
             botaoSabores.Text = "Sabores";
             botaoSabores.UseVisualStyleBackColor = true;
@@ -123,9 +126,9 @@
             // 
             // botaoIngredientes
             // 
-            botaoIngredientes.Location = new Point(56, 126);
+            botaoIngredientes.Location = new Point(53, 118);
             botaoIngredientes.Name = "botaoIngredientes";
-            botaoIngredientes.Size = new Size(97, 23);
+            botaoIngredientes.Size = new Size(97, 29);
             botaoIngredientes.TabIndex = 3;
             botaoIngredientes.Text = "Ingredientes";
             botaoIngredientes.UseVisualStyleBackColor = true;
@@ -133,9 +136,9 @@
             // 
             // botaoClientes
             // 
-            botaoClientes.Location = new Point(56, 97);
+            botaoClientes.Location = new Point(53, 83);
             botaoClientes.Name = "botaoClientes";
-            botaoClientes.Size = new Size(97, 23);
+            botaoClientes.Size = new Size(97, 29);
             botaoClientes.TabIndex = 2;
             botaoClientes.Text = "Clientes";
             botaoClientes.UseVisualStyleBackColor = true;
@@ -143,7 +146,7 @@
             // 
             // botaoCadastroValor
             // 
-            botaoCadastroValor.Location = new Point(56, 184);
+            botaoCadastroValor.Location = new Point(53, 189);
             botaoCadastroValor.Name = "botaoCadastroValor";
             botaoCadastroValor.Size = new Size(97, 42);
             botaoCadastroValor.TabIndex = 5;
@@ -154,9 +157,9 @@
             // botaoFuncionarios
             // 
             botaoFuncionarios.AutoSize = true;
-            botaoFuncionarios.Location = new Point(56, 68);
+            botaoFuncionarios.Location = new Point(53, 45);
             botaoFuncionarios.Name = "botaoFuncionarios";
-            botaoFuncionarios.Size = new Size(97, 25);
+            botaoFuncionarios.Size = new Size(97, 32);
             botaoFuncionarios.TabIndex = 1;
             botaoFuncionarios.Text = "Funcionários";
             botaoFuncionarios.UseVisualStyleBackColor = true;
@@ -166,7 +169,7 @@
             // 
             // botaoCadastroProduto
             // 
-            botaoCadastroProduto.Location = new Point(56, 232);
+            botaoCadastroProduto.Location = new Point(53, 237);
             botaoCadastroProduto.Name = "botaoCadastroProduto";
             botaoCadastroProduto.Size = new Size(97, 40);
             botaoCadastroProduto.TabIndex = 6;
@@ -176,9 +179,9 @@
             // 
             // botaoPrincipal
             // 
-            botaoPrincipal.Location = new Point(56, 39);
+            botaoPrincipal.Location = new Point(53, 12);
             botaoPrincipal.Name = "botaoPrincipal";
-            botaoPrincipal.Size = new Size(97, 23);
+            botaoPrincipal.Size = new Size(97, 27);
             botaoPrincipal.TabIndex = 0;
             botaoPrincipal.Text = "Principal";
             botaoPrincipal.UseVisualStyleBackColor = true;
@@ -196,6 +199,8 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(pictureBox9);
+            panel1.Controls.Add(buttonPedidos);
             panel1.Controls.Add(buttonCor);
             panel1.Controls.Add(pictureBox8);
             panel1.Controls.Add(pictureBox7);
@@ -219,6 +224,26 @@
             panel1.TabIndex = 9;
             panel1.Paint += panel1_Paint;
             // 
+            // pictureBox9
+            // 
+            pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
+            pictureBox9.Location = new Point(9, 283);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(38, 35);
+            pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox9.TabIndex = 18;
+            pictureBox9.TabStop = false;
+            // 
+            // buttonPedidos
+            // 
+            buttonPedidos.Location = new Point(53, 283);
+            buttonPedidos.Name = "buttonPedidos";
+            buttonPedidos.Size = new Size(97, 35);
+            buttonPedidos.TabIndex = 1;
+            buttonPedidos.Text = "Pedidos";
+            buttonPedidos.UseVisualStyleBackColor = true;
+            buttonPedidos.Click += buttonPedidos_Click;
+            // 
             // buttonCor
             // 
             buttonCor.Location = new Point(138, 345);
@@ -232,7 +257,7 @@
             // pictureBox8
             // 
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(12, 232);
+            pictureBox8.Location = new Point(9, 237);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(38, 40);
             pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -242,7 +267,7 @@
             // pictureBox7
             // 
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(12, 184);
+            pictureBox7.Location = new Point(9, 189);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(38, 42);
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -252,9 +277,9 @@
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(12, 155);
+            pictureBox6.Location = new Point(9, 153);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(38, 23);
+            pictureBox6.Size = new Size(38, 30);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 14;
             pictureBox6.TabStop = false;
@@ -262,9 +287,9 @@
             // pictureBox5
             // 
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(12, 126);
+            pictureBox5.Location = new Point(9, 118);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(38, 23);
+            pictureBox5.Size = new Size(38, 29);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 13;
             pictureBox5.TabStop = false;
@@ -272,9 +297,9 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(12, 97);
+            pictureBox4.Location = new Point(9, 83);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(38, 23);
+            pictureBox4.Size = new Size(38, 29);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 12;
             pictureBox4.TabStop = false;
@@ -282,9 +307,9 @@
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(12, 68);
+            pictureBox3.Location = new Point(9, 45);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(38, 25);
+            pictureBox3.Size = new Size(38, 32);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 11;
             pictureBox3.TabStop = false;
@@ -292,9 +317,9 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(12, 39);
+            pictureBox2.Location = new Point(9, 12);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(38, 23);
+            pictureBox2.Size = new Size(38, 27);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 10;
             pictureBox2.TabStop = false;
@@ -397,6 +422,7 @@
             contextMenuStripSystem.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
@@ -446,5 +472,7 @@
         private ToolStripMenuItem sobreToolStripMenuItem;
         private Button buttonCor;
         private ColorDialog colorDialog1;
+        private PictureBox pictureBox9;
+        private Button buttonPedidos;
     }
 }

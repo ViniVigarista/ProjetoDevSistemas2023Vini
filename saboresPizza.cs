@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProjetoDevSistemas2023Vini.DAO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProjetoDevSistemas2023Vini
 {
@@ -38,7 +39,7 @@ namespace ProjetoDevSistemas2023Vini
 
         }
 
-        private void CarregaEnumListBox()
+        public void CarregaEnumListBox()
         {
             //popular listBoxCategoria
             listBoxCategoria.Items.Clear();
@@ -68,6 +69,58 @@ namespace ProjetoDevSistemas2023Vini
                 MessageBox.Show(ex.Message);
             }
         }
+
+        public void AtualizaTelaEditar(int id)
+        {
+            //Instância e Preenche o objeto com os dados da view
+            var sabor = new Sabor
+            {
+                Id = id,
+            };
+            try
+            {
+                // chama o método para buscar todos os dados da nossa camada model
+                DataTable linhas = saborDAO.Buscar(sabor);
+                // seta os dados na tela
+                foreach (DataRow row in linhas.Rows)
+                {
+                    textBoxId.Text = row[0].ToString();
+                    textBoxSabor.Text = row[1].ToString();
+                    pictureBoxImagem.Image = Funcoes.ConverteByteArrayParaImagem((byte[])row[2]);
+                    listBoxCategoria.Text = ClassEnum.GetDescription((EnumSaborCategoria)char.Parse(row[3].ToString()));
+                    listBoxTipo.Text = ClassEnum.GetDescription((EnumSaborTipo)char.Parse(row[4].ToString()));
+                    // busca e seleciona os itens do sabor
+                    DataTable linhasIngredientes = saborDAO.BuscarItensSabor(sabor);
+                    foreach (DataRow dr in linhasIngredientes.Rows)
+                    {
+                        for (int i = 0; i < checkedListBoxIngredientes.Items.Count; i++)
+                        {
+                            if (dr[1].ToString() == ((Ingrediente)checkedListBoxIngredientes.Items[i]).Nome.ToString())
+                            {
+                                checkedListBoxIngredientes.SetItemChecked(i, true);
+                            }
+                        }
+                    }
+                }
+                textBoxSabor.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void DataGridViewDados_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridViewDados.SelectedCells.Count > 0)
+            {
+                //pega a primeira coluna, que esta com o ID, da linha selecionada
+                DataGridViewRow selectedRow = dataGridViewDados.Rows[dataGridViewDados.SelectedCells[0].RowIndex];
+                int id = Convert.ToInt32(selectedRow.Cells[0].Value);
+                AtualizaTelaEditar(id);
+            }
+        }
+
 
 
 
@@ -187,11 +240,69 @@ namespace ProjetoDevSistemas2023Vini
             }
         }
 
-        
+
 
         private void buttonLista_Click(object sender, EventArgs e)
         {
             AtualizarTela();
+        }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            if (textBoxId.Text.Length <= 0)
+            {
+                MessageBox.Show("Selecione um sabor!");
+                return;
+            }
+            //Instância e Preenche o objeto com os dados da view
+            var sabor = new Sabor
+            {
+                Id = int.Parse(textBoxId.Text),
+                Descricao = textBoxSabor.Text,
+                Foto = Funcoes.ConverteImagemParaByteArray(pictureBoxImagem.Image),
+                Categoria = (char)(EnumSaborCategoria)Enum.Parse(typeof(EnumSaborCategoria), listBoxCategoria.Text),
+                Tipo = (char)(EnumSaborTipo)Enum.Parse(typeof(EnumSaborTipo), listBoxTipo.Text),
+                SaborIngredientes = checkedListBoxIngredientes.CheckedItems.OfType<Ingrediente>().ToList(),
+            };
+            try
+            {
+                // chama o método para inserir da camada model
+                saborDAO.Editar(sabor);
+                MessageBox.Show("Dados editados com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void buttonExcluir_Click(object sender, EventArgs e)
+        {
+            if (textBoxId.Text.Length <= 0)
+            {
+                MessageBox.Show("Selecione um sabor!");
+                return;
+            }
+            //Instância e Preenche o objeto com os dados da view
+            var sabor = new Sabor
+            {
+                Id = int.Parse(textBoxId.Text),
+            };
+            try
+            {
+                // chama o método para inserir da camada model
+                saborDAO.Excluir(sabor);
+                MessageBox.Show("Dados excluidos com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void checkedListBoxIngredientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
