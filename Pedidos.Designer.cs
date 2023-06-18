@@ -29,35 +29,42 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            maskedTextBoxCPF = new MaskedTextBox();
-            maskedTextBoxtelefone = new MaskedTextBox();
             textBoxNome = new TextBox();
             label2 = new Label();
             label3 = new Label();
-            textBox1 = new TextBox();
+            textBoxRua = new TextBox();
             label4 = new Label();
             label5 = new Label();
-            textBox2 = new TextBox();
+            textBoxNum = new TextBox();
             buttonClientes = new Button();
             panel1 = new Panel();
-            buttonCancelar = new Button();
-            buttonCadastrar = new Button();
             comboBoxtamanho = new ComboBox();
-            label12 = new Label();
             label8 = new Label();
+            buttonInserirPizza = new Button();
             textBoxObservação = new TextBox();
-            label11 = new Label();
-            checkedListBoxIngredientes = new CheckedListBox();
+            checkedListBoxSabores = new CheckedListBox();
             label6 = new Label();
-            listBoxML = new ListBox();
             label7 = new Label();
-            comboBox1 = new ComboBox();
-            listBoxTipo = new ListBox();
+            comboBoxBorda = new ComboBox();
             label10 = new Label();
-            textBox3 = new TextBox();
+            label12 = new Label();
+            label11 = new Label();
+            textBoxbairro = new TextBox();
             label9 = new Label();
             buttonEditar = new Button();
+            textBoxId = new TextBox();
+            buttonSalvar = new Button();
+            buttonCancelar = new Button();
+            radioButtonEntrega = new RadioButton();
+            radioButtonRetirada = new RadioButton();
+            textBoxCPF = new TextBox();
+            maskedTextBoxTelefone = new MaskedTextBox();
+            textBox1 = new TextBox();
+            label13 = new Label();
+            panel2 = new Panel();
+            checkedListBoxProduto = new CheckedListBox();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -69,28 +76,12 @@
             label1.TabIndex = 1;
             label1.Text = "CPF";
             // 
-            // maskedTextBoxCPF
-            // 
-            maskedTextBoxCPF.Location = new Point(67, 68);
-            maskedTextBoxCPF.Mask = "000.000.000-00";
-            maskedTextBoxCPF.Name = "maskedTextBoxCPF";
-            maskedTextBoxCPF.Size = new Size(134, 23);
-            maskedTextBoxCPF.TabIndex = 4;
-            // 
-            // maskedTextBoxtelefone
-            // 
-            maskedTextBoxtelefone.Location = new Point(295, 68);
-            maskedTextBoxtelefone.Mask = "(00) 0 0000-0000";
-            maskedTextBoxtelefone.Name = "maskedTextBoxtelefone";
-            maskedTextBoxtelefone.Size = new Size(139, 23);
-            maskedTextBoxtelefone.TabIndex = 6;
-            // 
             // textBoxNome
             // 
             textBoxNome.Location = new Point(67, 27);
             textBoxNome.Name = "textBoxNome";
             textBoxNome.Size = new Size(196, 23);
-            textBoxNome.TabIndex = 5;
+            textBoxNome.TabIndex = 1;
             textBoxNome.Leave += textBoxNome_Leave;
             // 
             // label2
@@ -111,12 +102,12 @@
             label3.TabIndex = 8;
             label3.Text = "Nome";
             // 
-            // textBox1
+            // textBoxRua
             // 
-            textBox1.Location = new Point(67, 109);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(182, 23);
-            textBox1.TabIndex = 9;
+            textBoxRua.Location = new Point(67, 109);
+            textBoxRua.Name = "textBoxRua";
+            textBoxRua.Size = new Size(182, 23);
+            textBoxRua.TabIndex = 9;
             // 
             // label4
             // 
@@ -136,12 +127,12 @@
             label5.TabIndex = 12;
             label5.Text = "Num";
             // 
-            // textBox2
+            // textBoxNum
             // 
-            textBox2.Location = new Point(316, 109);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(55, 23);
-            textBox2.TabIndex = 11;
+            textBoxNum.Location = new Point(316, 109);
+            textBoxNum.Name = "textBoxNum";
+            textBoxNum.Size = new Size(55, 23);
+            textBoxNum.TabIndex = 11;
             // 
             // buttonClientes
             // 
@@ -156,39 +147,19 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.GradientActiveCaption;
-            panel1.Controls.Add(buttonCancelar);
-            panel1.Controls.Add(buttonCadastrar);
             panel1.Controls.Add(comboBoxtamanho);
             panel1.Controls.Add(label8);
+            panel1.Controls.Add(buttonInserirPizza);
             panel1.Controls.Add(textBoxObservação);
-            panel1.Controls.Add(checkedListBoxIngredientes);
+            panel1.Controls.Add(checkedListBoxSabores);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label7);
-            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(comboBoxBorda);
             panel1.Controls.Add(label10);
             panel1.Location = new Point(33, 181);
             panel1.Name = "panel1";
-            panel1.Size = new Size(731, 323);
+            panel1.Size = new Size(470, 323);
             panel1.TabIndex = 14;
-            // 
-            // buttonCancelar
-            // 
-            buttonCancelar.Location = new Point(611, 285);
-            buttonCancelar.Name = "buttonCancelar";
-            buttonCancelar.Size = new Size(75, 23);
-            buttonCancelar.TabIndex = 28;
-            buttonCancelar.Text = "Cancelar";
-            buttonCancelar.UseVisualStyleBackColor = true;
-            // 
-            // buttonCadastrar
-            // 
-            buttonCadastrar.Location = new Point(530, 285);
-            buttonCadastrar.Name = "buttonCadastrar";
-            buttonCadastrar.Size = new Size(75, 23);
-            buttonCadastrar.TabIndex = 27;
-            buttonCadastrar.Text = "Cadastrar";
-            buttonCadastrar.UseVisualStyleBackColor = true;
-            buttonCadastrar.Click += buttonCadastro_Click;
             // 
             // comboBoxtamanho
             // 
@@ -199,50 +170,42 @@
             comboBoxtamanho.Size = new Size(148, 23);
             comboBoxtamanho.TabIndex = 0;
             // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Location = new Point(221, 564);
-            label12.Name = "label12";
-            label12.Size = new Size(56, 15);
-            label12.TabIndex = 21;
-            label12.Text = "Tamanho";
-            // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(16, 287);
+            label8.Location = new Point(312, 76);
             label8.Name = "label8";
             label8.Size = new Size(69, 15);
             label8.TabIndex = 16;
             label8.Text = "Observação";
             label8.Click += label8_Click;
             // 
+            // buttonInserirPizza
+            // 
+            buttonInserirPizza.Location = new Point(376, 285);
+            buttonInserirPizza.Name = "buttonInserirPizza";
+            buttonInserirPizza.Size = new Size(75, 23);
+            buttonInserirPizza.TabIndex = 27;
+            buttonInserirPizza.Text = "Inserir";
+            buttonInserirPizza.UseVisualStyleBackColor = true;
+            buttonInserirPizza.Click += buttonInserirPizza_Click;
+            // 
             // textBoxObservação
             // 
-            textBoxObservação.Location = new Point(91, 284);
+            textBoxObservação.Location = new Point(262, 94);
             textBoxObservação.Multiline = true;
             textBoxObservação.Name = "textBoxObservação";
-            textBoxObservação.Size = new Size(268, 24);
+            textBoxObservação.Size = new Size(171, 96);
             textBoxObservação.TabIndex = 15;
             textBoxObservação.TextChanged += textBoxObservação_TextChanged;
             // 
-            // label11
+            // checkedListBoxSabores
             // 
-            label11.AutoSize = true;
-            label11.Location = new Point(61, 564);
-            label11.Name = "label11";
-            label11.Size = new Size(48, 15);
-            label11.TabIndex = 26;
-            label11.Text = "Bebidas";
-            // 
-            // checkedListBoxIngredientes
-            // 
-            checkedListBoxIngredientes.FormattingEnabled = true;
-            checkedListBoxIngredientes.Location = new Point(20, 76);
-            checkedListBoxIngredientes.Name = "checkedListBoxIngredientes";
-            checkedListBoxIngredientes.Size = new Size(148, 148);
-            checkedListBoxIngredientes.TabIndex = 22;
+            checkedListBoxSabores.FormattingEnabled = true;
+            checkedListBoxSabores.Location = new Point(20, 76);
+            checkedListBoxSabores.Name = "checkedListBoxSabores";
+            checkedListBoxSabores.Size = new Size(170, 148);
+            checkedListBoxSabores.TabIndex = 22;
             // 
             // label6
             // 
@@ -253,15 +216,6 @@
             label6.TabIndex = 1;
             label6.Text = "Tamanho Pizza";
             // 
-            // listBoxML
-            // 
-            listBoxML.FormattingEnabled = true;
-            listBoxML.ItemHeight = 15;
-            listBoxML.Location = new Point(190, 582);
-            listBoxML.Name = "listBoxML";
-            listBoxML.Size = new Size(120, 94);
-            listBoxML.TabIndex = 20;
-            // 
             // label7
             // 
             label7.AutoSize = true;
@@ -271,24 +225,14 @@
             label7.TabIndex = 23;
             label7.Text = "Sabores Pizza";
             // 
-            // comboBox1
+            // comboBoxBorda
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Não", "Catupiry", "Chocolate Branco", "Cheddar", "Chocolate Preto" });
-            comboBox1.Location = new Point(20, 246);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(148, 23);
-            comboBox1.TabIndex = 24;
-            // 
-            // listBoxTipo
-            // 
-            listBoxTipo.FormattingEnabled = true;
-            listBoxTipo.ItemHeight = 15;
-            listBoxTipo.Location = new Point(33, 582);
-            listBoxTipo.Name = "listBoxTipo";
-            listBoxTipo.Size = new Size(120, 94);
-            listBoxTipo.TabIndex = 20;
-            listBoxTipo.SelectedIndexChanged += listBoxTipo_SelectedIndexChanged;
+            comboBoxBorda.FormattingEnabled = true;
+            comboBoxBorda.Items.AddRange(new object[] { "Não", "Catupiry", "Chocolate Branco", "Cheddar", "Chocolate Preto" });
+            comboBoxBorda.Location = new Point(20, 246);
+            comboBoxBorda.Name = "comboBoxBorda";
+            comboBoxBorda.Size = new Size(148, 23);
+            comboBoxBorda.TabIndex = 24;
             // 
             // label10
             // 
@@ -299,12 +243,30 @@
             label10.TabIndex = 25;
             label10.Text = "Borda";
             // 
-            // textBox3
+            // label12
             // 
-            textBox3.Location = new Point(453, 109);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 17;
+            label12.AutoSize = true;
+            label12.Location = new Point(206, 14);
+            label12.Name = "label12";
+            label12.Size = new Size(56, 15);
+            label12.TabIndex = 21;
+            label12.Text = "Tamanho";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(46, 14);
+            label11.Name = "label11";
+            label11.Size = new Size(48, 15);
+            label11.TabIndex = 26;
+            label11.Text = "Bebidas";
+            // 
+            // textBoxbairro
+            // 
+            textBoxbairro.Location = new Point(453, 109);
+            textBoxbairro.Name = "textBoxbairro";
+            textBoxbairro.Size = new Size(100, 23);
+            textBoxbairro.TabIndex = 17;
             // 
             // label9
             // 
@@ -324,29 +286,134 @@
             buttonEditar.Text = "Editar Cliente";
             buttonEditar.UseVisualStyleBackColor = true;
             // 
+            // textBoxId
+            // 
+            textBoxId.Location = new Point(33, 152);
+            textBoxId.Name = "textBoxId";
+            textBoxId.Size = new Size(100, 23);
+            textBoxId.TabIndex = 29;
+            textBoxId.Visible = false;
+            // 
+            // buttonSalvar
+            // 
+            buttonSalvar.Location = new Point(686, 466);
+            buttonSalvar.Name = "buttonSalvar";
+            buttonSalvar.Size = new Size(75, 23);
+            buttonSalvar.TabIndex = 30;
+            buttonSalvar.Text = "Salvar";
+            buttonSalvar.UseVisualStyleBackColor = true;
+            // 
+            // buttonCancelar
+            // 
+            buttonCancelar.Location = new Point(767, 466);
+            buttonCancelar.Name = "buttonCancelar";
+            buttonCancelar.Size = new Size(75, 23);
+            buttonCancelar.TabIndex = 31;
+            buttonCancelar.Text = "Cancelar";
+            buttonCancelar.UseVisualStyleBackColor = true;
+            buttonCancelar.Click += buttonCancelar_Click;
+            // 
+            // radioButtonEntrega
+            // 
+            radioButtonEntrega.AutoSize = true;
+            radioButtonEntrega.Location = new Point(523, 386);
+            radioButtonEntrega.Name = "radioButtonEntrega";
+            radioButtonEntrega.Size = new Size(65, 19);
+            radioButtonEntrega.TabIndex = 32;
+            radioButtonEntrega.TabStop = true;
+            radioButtonEntrega.Text = "Entrega";
+            radioButtonEntrega.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonRetirada
+            // 
+            radioButtonRetirada.AutoSize = true;
+            radioButtonRetirada.Location = new Point(523, 411);
+            radioButtonRetirada.Name = "radioButtonRetirada";
+            radioButtonRetirada.Size = new Size(68, 19);
+            radioButtonRetirada.TabIndex = 33;
+            radioButtonRetirada.TabStop = true;
+            radioButtonRetirada.Text = "Retirada";
+            radioButtonRetirada.UseVisualStyleBackColor = true;
+            // 
+            // textBoxCPF
+            // 
+            textBoxCPF.Location = new Point(67, 68);
+            textBoxCPF.Name = "textBoxCPF";
+            textBoxCPF.Size = new Size(156, 23);
+            textBoxCPF.TabIndex = 34;
+            textBoxCPF.Leave += textBoxCPF_Leave;
+            // 
+            // maskedTextBoxTelefone
+            // 
+            maskedTextBoxTelefone.Location = new Point(295, 68);
+            maskedTextBoxTelefone.Mask = "(99) 00000-0000";
+            maskedTextBoxTelefone.Name = "maskedTextBoxTelefone";
+            maskedTextBoxTelefone.Size = new Size(152, 23);
+            maskedTextBoxTelefone.TabIndex = 36;
+            maskedTextBoxTelefone.Leave += maskedTextBoxTelefone_Leave;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(562, 436);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 23);
+            textBox1.TabIndex = 37;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(523, 439);
+            label13.Name = "label13";
+            label13.Size = new Size(33, 15);
+            label13.TabIndex = 38;
+            label13.Text = "Valor";
+            // 
+            // panel2
+            // 
+            panel2.BackColor = SystemColors.ActiveCaption;
+            panel2.Controls.Add(checkedListBoxProduto);
+            panel2.Controls.Add(label11);
+            panel2.Controls.Add(label12);
+            panel2.Location = new Point(523, 181);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(319, 190);
+            panel2.TabIndex = 39;
+            // 
+            // checkedListBoxProduto
+            // 
+            checkedListBoxProduto.FormattingEnabled = true;
+            checkedListBoxProduto.Location = new Point(19, 32);
+            checkedListBoxProduto.Name = "checkedListBoxProduto";
+            checkedListBoxProduto.Size = new Size(120, 94);
+            checkedListBoxProduto.TabIndex = 29;
+            // 
             // Pedidos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 883);
+            ClientSize = new Size(895, 581);
+            Controls.Add(panel2);
+            Controls.Add(label13);
+            Controls.Add(textBox1);
+            Controls.Add(maskedTextBoxTelefone);
+            Controls.Add(textBoxCPF);
+            Controls.Add(radioButtonRetirada);
+            Controls.Add(radioButtonEntrega);
+            Controls.Add(buttonCancelar);
+            Controls.Add(buttonSalvar);
+            Controls.Add(textBoxId);
             Controls.Add(buttonEditar);
             Controls.Add(label9);
-            Controls.Add(textBox3);
-            Controls.Add(label12);
+            Controls.Add(textBoxbairro);
             Controls.Add(panel1);
             Controls.Add(buttonClientes);
             Controls.Add(label5);
-            Controls.Add(label11);
-            Controls.Add(textBox2);
+            Controls.Add(textBoxNum);
             Controls.Add(label4);
-            Controls.Add(textBox1);
-            Controls.Add(listBoxML);
+            Controls.Add(textBoxRua);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(listBoxTipo);
-            Controls.Add(maskedTextBoxtelefone);
             Controls.Add(textBoxNome);
-            Controls.Add(maskedTextBoxCPF);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             KeyPreview = true;
@@ -357,39 +424,47 @@
             Load += Pedidos_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
         private Label label1;
-        private MaskedTextBox maskedTextBoxCPF;
-        private MaskedTextBox maskedTextBoxtelefone;
         private TextBox textBoxNome;
         private Label label2;
         private Label label3;
-        private TextBox textBox1;
+        private TextBox textBoxRua;
         private Label label4;
         private Label label5;
-        private TextBox textBox2;
+        private TextBox textBoxNum;
         private Button buttonClientes;
         private Panel panel1;
         private Label label6;
         private ComboBox comboBoxtamanho;
         private Label label7;
-        private CheckedListBox checkedListBoxIngredientes;
+        private CheckedListBox checkedListBoxSabores;
         private TextBox textBoxObservação;
         private Label label8;
-        private TextBox textBox3;
+        private TextBox textBoxbairro;
         private Label label9;
         private Button buttonEditar;
         private Label label10;
-        private ComboBox comboBox1;
+        private ComboBox comboBoxBorda;
         private Label label11;
-        private ListBox listBoxTipo;
         private Label label12;
-        private ListBox listBoxML;
+        private Button buttonInserirPizza;
+        private TextBox textBoxId;
+        private Button buttonSalvar;
         private Button buttonCancelar;
-        private Button buttonCadastrar;
+        private RadioButton radioButtonEntrega;
+        private RadioButton radioButtonRetirada;
+        private TextBox textBoxCPF;
+        private MaskedTextBox maskedTextBoxTelefone;
+        private TextBox textBox1;
+        private Label label13;
+        private Panel panel2;
+        private CheckedListBox checkedListBoxProduto;
     }
 }

@@ -67,7 +67,6 @@ namespace ProjetoDevSistemas2023Vini
         {
 
 
-
             if (string.IsNullOrEmpty(textBoxNomeIngrediente.Text))
             {
                 textBoxNomeIngrediente.BackColor = Color.Red;

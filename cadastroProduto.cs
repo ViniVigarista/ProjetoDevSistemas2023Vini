@@ -14,7 +14,7 @@ namespace ProjetoDevSistemas2023Vini
 {
     public partial class cadastroProduto : Form
     {
-        private ProdutoDAO produtoDAO;
+        public ProdutoDAO produtoDAO;
         public cadastroProduto()
         {
             InitializeComponent();

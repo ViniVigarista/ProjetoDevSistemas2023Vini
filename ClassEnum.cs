@@ -27,6 +27,20 @@ public enum EnumValorTamanho
     Familia = 'F'
 }
 
+public enum EnumBorda
+{
+    [Description("Nao")]
+    Nao = 'N',
+    [Description("Cheddar")]
+    Cheddar = 'C',
+    [Description("Chocolate Preto")]
+    Grande = 'P',
+    [Description("Chocolate Branco")]
+    Familia = 'B',
+    [Description("Chocolate Catupity")]
+    Catupiry = 'Y'
+}
+
 public enum EnumSaborCategoria
 {
     [Description("Tradicional")]
